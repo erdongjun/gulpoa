@@ -1,0 +1,14 @@
+/*基本规则*/
+
+@import'base.scss';
+
+body{
+	background: $color;
+	h1{
+		color:red;
+		border: 1px solid #ccc;
+		 border-radius: $size;
+		 transform: rotate(-3deg);
+		 box-shadow: 1px 1px $size #292929;
+	}
+}

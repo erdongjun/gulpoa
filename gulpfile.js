@@ -11,7 +11,6 @@ var gulp = require('gulp'),
     // rev = require('gulp-rev'),   //追加版本号
     clean = require('gulp-clean'),   //清空文件夹
     rename = require('gulp-rename');   //文件名重写
-
 //压缩js 文件，压缩后文件放入build/js下   
 gulp.task('js',function(){
     gulp.src('./src/js/*.js')
@@ -52,7 +51,6 @@ gulp.task('html', function() {
     // .pipe(uglify())
     .pipe(gulp.dest('./build/html'))
 });
-
 // 注册任务
 gulp.task('webserver', function() {
   gulp.src( './' ) // 服务器目录（./代表根目录）
@@ -69,7 +67,7 @@ gulp.task('watch',function(){
             gulp.run('html');
         })
         // 监听css
-        gulp.watch('./src/css/*.css', function(){
+        gulp.watch('./src/css/*.scss', function(){
             gulp.run('css');
         });
 
